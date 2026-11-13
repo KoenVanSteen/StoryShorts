@@ -1,0 +1,121 @@
+metadata:
+  generated: "2026-11-13"
+  source_spec: "documentation/PROJECT_IDEA.md"
+  target_plan: "documentation/implementation/plan.md"
+
+summary:
+  total_requirements: 9
+  covered_requirements: 9
+  missing_requirements: 0
+  coverage_percentage: 100.0
+
+requirements:
+  - req_id: "REQ-001"
+    req_description: "Owner-authored Markdown scripts in per-story folders; no LLM story generation"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Setup"
+      items:
+        - item_id: "1.1"
+          description: "Minimal CLI and Markdown story folders"
+        - item_id: "4.2"
+          description: "End-to-end acceptance"
+  - req_id: "REQ-002"
+    req_description: "Independently render separately supplied short and long scripts"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "Owner script to finished video"
+      items:
+        - item_id: "1.1"
+          description: "Minimal CLI and Markdown story folders"
+        - item_id: "2.2"
+          description: "Artifact-led video rendering"
+  - req_id: "REQ-003"
+    req_description: "Local narration and synchronized captions"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "Owner script to finished video"
+      items:
+        - item_id: "1.2"
+          description: "Local narration tool selection"
+        - item_id: "2.1"
+          description: "Narration and captions for each supplied version"
+  - req_id: "REQ-004"
+    req_description: "Original artifact-led, varied visual presentation"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-2"
+      phase_name: "Owner script to finished video"
+      items:
+        - item_id: "2.2"
+          description: "Artifact-led video rendering"
+  - req_id: "REQ-005"
+    req_description: "Track and use only cleared third-party assets"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Setup"
+      items:
+        - item_id: "1.1"
+          description: "Minimal CLI and Markdown story folders"
+        - item_id: "2.2"
+          description: "Artifact-led video rendering"
+  - req_id: "REQ-006"
+    req_description: "Owner approval before each upload or schedule"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "Approved YouTube publishing"
+      items:
+        - item_id: "3.1"
+          description: "Per-video review gate"
+        - item_id: "3.2"
+          description: "Upload and schedule"
+  - req_id: "REQ-007"
+    req_description: "YouTube upload and scheduled publication"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-3"
+      phase_name: "Approved YouTube publishing"
+      items:
+        - item_id: "3.2"
+          description: "Upload and schedule"
+  - req_id: "REQ-008"
+    req_description: "No unapproved costs or token-generating services"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Setup"
+      items:
+        - item_id: "1.2"
+          description: "Local narration tool selection"
+        - item_id: "2.1"
+          description: "Narration and captions for each supplied version"
+        - item_id: "3.2"
+          description: "Upload and schedule"
+        - item_id: "4.2"
+          description: "End-to-end acceptance"
+  - req_id: "REQ-009"
+    req_description: "Minimal local CLI, Docker, and concise output"
+    priority: "P1"
+    plan_mapping:
+      phase: "Phase-1"
+      phase_name: "Setup"
+      items:
+        - item_id: "1.1"
+          description: "Minimal CLI and Markdown story folders"
+        - item_id: "4.1"
+          description: "Docker"
+        - item_id: "4.2"
+          description: "End-to-end acceptance"
+
+missing_requirements: []
+orphan_plan_items: []
+validation:
+  passed: true
+  errors: []
+  warnings:
+    - "Requirement IDs are assigned for traceability; the source idea does not yet label requirements with IDs."

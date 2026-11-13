@@ -1,0 +1,109 @@
+metadata:
+  generated: "2026-11-13"
+  source_plan: "documentation/implementation/plan.md"
+  target_tasks: "documentation/implementation/plan.md (inline task list)"
+
+summary:
+  total_plan_items: 8
+  covered_plan_items: 8
+  missing_plan_items: 0
+  coverage_percentage: 100.0
+  total_tasks_generated: 9
+  orphan_tasks: 0
+
+phases:
+  - phase_id: "Phase-1"
+    phase_name: "Setup"
+    items:
+      - item_id: "1.1"
+        description: "Minimal CLI and Markdown story folders"
+        tasks:
+          - task_id: "T001"
+            description: "Create minimal Python CLI package"
+          - task_id: "T002"
+            description: "Parse and validate separate short and long Markdown scripts"
+      - item_id: "1.2"
+        description: "Local narration tool selection"
+        tasks:
+          - task_id: "T003"
+            description: "Test local TTS and record engine/voice license"
+  - phase_id: "Phase-2"
+    phase_name: "Owner script to finished video"
+    items:
+      - item_id: "2.1"
+        description: "Narration and captions for each supplied version"
+        tasks:
+          - task_id: "T004"
+            description: "Implement local narration and synchronized captions"
+      - item_id: "2.2"
+        description: "Artifact-led video rendering"
+        tasks:
+          - task_id: "T005"
+            description: "Render short and long-form videos with FFmpeg"
+  - phase_id: "Phase-3"
+    phase_name: "Approved YouTube publishing"
+    items:
+      - item_id: "3.1"
+        description: "Per-video review gate"
+        tasks:
+          - task_id: "T006"
+            description: "Require owner confirmation for the exact rendered video"
+      - item_id: "3.2"
+        description: "Upload and schedule"
+        tasks:
+          - task_id: "T007"
+            description: "Implement OAuth upload and scheduling"
+  - phase_id: "Phase-4"
+    phase_name: "Packaging and verification"
+    items:
+      - item_id: "4.1"
+        description: "Docker"
+        tasks:
+          - task_id: "T008"
+            description: "Add minimal Docker packaging"
+      - item_id: "4.2"
+        description: "End-to-end acceptance"
+        tasks:
+          - task_id: "T009"
+            description: "Run acceptance tests and document setup"
+
+missing_plan_items: []
+orphan_tasks: []
+upstream_trace:
+  - plan_item: "1.1"
+    source_requirements: ["REQ-001", "REQ-002", "REQ-005", "REQ-009"]
+    tasks: ["T001", "T002"]
+    full_trace: "REQ-001,REQ-002,REQ-005,REQ-009 -> Phase-1.1 -> T001,T002"
+  - plan_item: "1.2"
+    source_requirements: ["REQ-003", "REQ-008"]
+    tasks: ["T003"]
+    full_trace: "REQ-003,REQ-008 -> Phase-1.2 -> T003"
+  - plan_item: "2.1"
+    source_requirements: ["REQ-003", "REQ-008", "REQ-009"]
+    tasks: ["T004"]
+    full_trace: "REQ-003,REQ-008,REQ-009 -> Phase-2.1 -> T004"
+  - plan_item: "2.2"
+    source_requirements: ["REQ-002", "REQ-004", "REQ-005"]
+    tasks: ["T005"]
+    full_trace: "REQ-002,REQ-004,REQ-005 -> Phase-2.2 -> T005"
+  - plan_item: "3.1"
+    source_requirements: ["REQ-006"]
+    tasks: ["T006"]
+    full_trace: "REQ-006 -> Phase-3.1 -> T006"
+  - plan_item: "3.2"
+    source_requirements: ["REQ-006", "REQ-007", "REQ-008"]
+    tasks: ["T007"]
+    full_trace: "REQ-006,REQ-007,REQ-008 -> Phase-3.2 -> T007"
+  - plan_item: "4.1"
+    source_requirements: ["REQ-009"]
+    tasks: ["T008"]
+    full_trace: "REQ-009 -> Phase-4.1 -> T008"
+  - plan_item: "4.2"
+    source_requirements: ["REQ-001", "REQ-008", "REQ-009"]
+    tasks: ["T009"]
+    full_trace: "REQ-001,REQ-008,REQ-009 -> Phase-4.2 -> T009"
+
+validation:
+  passed: true
+  errors: []
+  warnings: []
